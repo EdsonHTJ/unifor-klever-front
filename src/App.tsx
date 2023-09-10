@@ -1,23 +1,74 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Article, getArticle, updateArticle } from "./services/article";
 
 function App() {
+  const [article, setArticle] = useState<Article | null>(null);
+  const fetchAttempted = useRef(false);
+
+  const fetchArticleSafely = async () => {
+    try {
+      let data = await getArticle();
+      setArticle(data);
+    } catch (error) {
+      console.error("Error fetching the article:", error);
+    }
+  };
+
+  useEffect(() => {
+    console.log("article", article);
+    if (!article && !fetchAttempted.current) {
+      fetchAttempted.current = true;
+      fetchArticleSafely();
+    }
+  }, [article]);
+
+  const setSentiment = async (art: Article, sentiment: string) => {
+    art.klv_sentiment = sentiment;
+    await updateArticle(art);
+    fetchArticleSafely();
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{article?.title}</h1>
+        <h2>Categories: {article?.category.join(", ")}</h2>
+        <div className="buttonDiv">
+          <button
+            className="myButton"
+            onClick={() => {
+              setSentiment(article!, "POSITIVE");
+            }}
+          >
+            Positive
+          </button>
+          <button
+            className="myButton"
+            onClick={() => {
+              setSentiment(article!, "NEGATIVE");
+            }}
+          >
+            Negative
+          </button>
+          <button
+            className="myButton"
+            onClick={() => {
+              setSentiment(article!, "NEUTRAL");
+            }}
+          >
+            Neutral
+          </button>
+          <button
+            className="myButton"
+            onClick={() => {
+              setSentiment(article!, "IRRELEVANT");
+            }}
+          >
+            Irrelevant
+          </button>
+        </div>
       </header>
     </div>
   );
