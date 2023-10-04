@@ -37,7 +37,7 @@ function App() {
         <h2>Categories: {article?.category.join(", ")}</h2>
         <div className="buttonDiv">
           <button
-            className="myButton"
+            className="myButton-green"
             onClick={() => {
               setSentiment(article!, "POSITIVE");
             }}
@@ -45,7 +45,7 @@ function App() {
             Positive
           </button>
           <button
-            className="myButton"
+            className="myButton-red"
             onClick={() => {
               setSentiment(article!, "NEGATIVE");
             }}
@@ -53,7 +53,7 @@ function App() {
             Negative
           </button>
           <button
-            className="myButton"
+            className="myButton-gray"
             onClick={() => {
               setSentiment(article!, "NEUTRAL");
             }}
@@ -61,7 +61,7 @@ function App() {
             Neutral
           </button>
           <button
-            className="myButton"
+            className="myButton-gray"
             onClick={() => {
               setSentiment(article!, "IRRELEVANT");
             }}

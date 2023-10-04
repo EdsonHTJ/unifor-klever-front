@@ -67,3 +67,54 @@ h2 {
 	transform: translate(4px,5px);
 
 }
+
+.myButton-green {
+	box-shadow: 8px 10px 0px 0px #00652c;
+	background-color:#00c00d;
+	border-radius:2px;
+	border:1px solid #000912;
+	font-size:35px;
+	padding:12px 44px;
+}
+
+.myButton-green:hover {
+  transition: all 0.2s ease-in-out;
+	box-shadow: 4px 5px 0px 0px #00652c;
+  -webkit-transform: translate(4px,5px);
+	transform: translate(4px,5px);
+
+}
+
+.myButton-red {
+	box-shadow: 8px 10px 0px 0px #780a00;
+	background-color:#b80000;
+	border-radius:2px;
+	border:1px solid #000912;
+	font-size:35px;
+	padding:12px 44px;
+}
+
+.myButton-red:hover {
+  transition: all 0.2s ease-in-out;
+	box-shadow: 4px 5px 0px 0px #780a00;
+  -webkit-transform: translate(4px,5px);
+	transform: translate(4px,5px);
+
+}
+
+.myButton-gray {
+	box-shadow: 8px 10px 0px 0px #3f3f3f;
+	background-color:#656565;
+	border-radius:2px;
+	border:1px solid #000912;
+	font-size:35px;
+	padding:12px 44px;
+}
+
+.myButton-gray:hover {
+  transition: all 0.2s ease-in-out;
+	box-shadow: 4px 5px 0px 0px #3f3f3f;
+  -webkit-transform: translate(4px,5px);
+	transform: translate(4px,5px);
+
+}
