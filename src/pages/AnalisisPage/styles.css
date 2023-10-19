@@ -1,0 +1,84 @@
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("../../assets/blob-scene-haikei.svg");
+  background-position: top left, bottom right;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  max-width: 80%;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.myButton {
+  background-color: #ce00d1;
+  border: 1px solid #000912;
+  font-size: 35px;
+  padding: 12px 44px;
+  border-radius: 10px;
+}
+
+.myButton:hover {
+  filter: brightness(0.9);
+}
+
+.myButton-green {
+  border-radius: 10px;
+  background-color: #00c00d;
+  border: 1px solid #000912;
+  font-size: 35px;
+  padding: 12px 44px;
+}
+
+.myButton-green:hover {
+  filter: brightness(0.9);
+}
+
+.myButton-red {
+  border-radius: 10px;
+  background-color: #b80000;
+  border: 1px solid #000912;
+  font-size: 35px;
+  padding: 12px 44px;
+}
+
+.myButton-red:hover {
+  filter: brightness(0.9);
+}
+
+.myButton-gray {
+  border-radius: 10px;
+  background-color: #656565;
+  border: 1px solid #000912;
+  font-size: 35px;
+  padding: 12px 44px;
+}
+
+.myButton-gray:hover {
+  filter: brightness(0.9);
+}

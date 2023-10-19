@@ -1,0 +1,120 @@
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("../../assets/blob-scene-haikei.svg");
+  background-position: top left, bottom right;
+  background-size: cover;
+}
+
+.Form-data {
+  font-size: 25px;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.Form-input {
+  background-color: #0e111a;
+  border: 2px solid #757575;
+  outline: none;
+  color: white;
+  width: 100%;
+  height: 80%;
+  text-align: start;
+  resize: none;
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.Form-submit:hover {
+  filter: brightness(0.9);
+}
+
+.Form-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.Form-result {
+  width: 17rem;
+  padding: 1rem;
+  background-color: rgb(110, 25, 117);
+  border-radius: 10px;
+}
+
+.Form-submit {
+  text-align: center;
+  cursor: pointer;
+  background-color: hsla(
+    294.92307692307696,
+    56.03448275862068%,
+    45.490196078431374%,
+    1
+  );
+  width: 15rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: medium;
+  transition: 100ms;
+  margin-left: auto;
+}
+
+.Process-selector {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.Process-item1 {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 10px 0px 0px 10px;
+  border-top: 1px solid rgb(110, 25, 117);
+  border-left: 1px solid rgb(110, 25, 117);
+  border-bottom: 1px solid rgb(110, 25, 117);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Process-item2 {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 0px 10px 10px 0px;
+  border-top: 1px solid rgb(110, 25, 117);
+  border-right: 1px solid rgb(110, 25, 117);
+  border-bottom: 1px solid rgb(110, 25, 117);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Process-active {
+  transition: 500ms;
+  background-color: white;
+  color: rgb(110, 25, 117);
+}
+
+.Process-inactive {
+  color: white;
+}
